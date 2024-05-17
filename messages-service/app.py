@@ -1,10 +1,10 @@
 from flask import Flask
 
-app = Flask(name)
+app = Flask(__name__)
 
 @app.route('/message', methods=['GET'])
 def get_message():
     return "not implemented yet"
 
-if name == 'main':
+if __name__ == '__main__':
     app.run(port=5002)
