@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 
-app = Flask(name)
+app = Flask(__name__)
 
 messages = {}
 
@@ -15,5 +15,5 @@ def get_messages():
     all_messages = "\n".join(messages.values())
     return all_messages
 
-if name == 'main':
+if __name__ == '__main__':
     app.run(port=5001)
